@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Todo from "./Todo";
 
+
 import "./todoApp.css";
+import confetti from "canvas-confetti";
 
 export default function TodoApp() {
   const [title, setTitle] = useState("");
@@ -29,9 +31,10 @@ export default function TodoApp() {
 
   function handleDelete(id) {
     const tempTodos = todos.filter((item) => item.id !== id);
-
+    confetti();
     setTodos([...tempTodos]);
   }
+
 
   function handleUpdate(id, value) {
     const temp = [...todos];

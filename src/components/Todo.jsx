@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import "./todoApp.css";
 
+
 export default function Todo({ item, onUpdate, onComplete, onDelete }) {
   const [isEdit, setIsEdit] = useState(false);
   const [value, setValue] = useState(item.title ?? "");
@@ -14,6 +15,8 @@ export default function Todo({ item, onUpdate, onComplete, onDelete }) {
     onUpdate(item.id, value);
     setIsEdit(false);
   }
+
+ 
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -35,7 +38,7 @@ export default function Todo({ item, onUpdate, onComplete, onDelete }) {
             value={value}
             onChange={handleChange}
           />
-          <button className="button" onClick={handleUpdate}>
+          <button className="button" onClick={handleButton}>
             Update
           </button>
         </form>

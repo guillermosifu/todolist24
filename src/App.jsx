@@ -6,6 +6,7 @@ function App() {
 
   return (
     <>
+    <h1>LISTA DE TAREAS G24</h1>
       <TodoApp/>
     </>
   )
